@@ -6,9 +6,6 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
 
 > [!WARNING]
 > **Disclaimer:** These dotfiles are tailored for my specific setup and hardware. I cannot guarantee they will work for you.
->
-> You must **manually copy** the files to your system and **update all file paths** (replacing `/home/calle` with your own home directory) in the config files.
-> Use at your own risk!
 
 # Configuration
 
@@ -127,14 +124,6 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
 `SUPER + CTRL + N` - Reload SwayNC  
 `SUPER + W` - Wallpaper Selector  
 `SUPER + SHIFT + S` - Screenshot (Grim + Slurp)  
-
-### Audio & Brightness
-`XF86AudioRaiseVolume` - Volume Up  
-`XF86AudioLowerVolume` - Volume Down  
-`XF86AudioMute` - Mute Toggle  
-`XF86MonBrightnessUp` - Brightness Up  
-`XF86MonBrightnessDown` - Brightness Down  
-`XF86AudioPlay` - Play/Pause  
 
 > [!TIP]
 > More keybinds can be found in `~/.config/hypr/hyprland.conf`.
