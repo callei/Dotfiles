@@ -141,7 +141,7 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
 
 ## Download Suggestions
 
-Based on your configuration, you will need these packages:
+Based on the configuration, you will need most of these packages:
 
 ```txt
 hyprland
@@ -149,6 +149,7 @@ waybar
 wofi
 kitty
 fish
+fastfetch
 oh-my-posh
 swaync
 swayosd-git
@@ -160,9 +161,9 @@ slurp
 wl-clipboard
 nautilus
 firefox
-code
+visual-studio-code-bin
 blueman
-network-manager-applet
+nmtui
 pavucontrol
 pipewire
 wireplumber
@@ -173,6 +174,17 @@ polkit-gnome
 ttf-font-awesome
 otf-font-awesome
 ```
+## Extra Download Suggestions
+
+Here are some additional tools and fun packages that I recommend for a better terminal experience:
+
+```txt
+btop        # Modern resource monitor
+bat         # Cat clone with syntax highlighting
+cava        # Console-based Audio Visualizer
+cmatrix     # Matrix screensaver
+cbonsai     # Grow a bonsai tree in your terminal :)
+```
 
 ## License & Attribution
 
@@ -181,8 +193,6 @@ This project contains code licensed under the GNU GENERAL PUBLIC LICENSE Version
 Parts of the code are based on work from other projects on GitHub. See individual files for details and original sources.
 
 - [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)
-
-If you use code from other GPL projects, you must credit the original authors and include this license.
 
 Also, special thanks to Stephan Raabe and the ml4w dotfiles:
 https://github.com/mylinuxforwork/dotfiles
