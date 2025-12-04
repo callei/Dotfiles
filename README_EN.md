@@ -2,7 +2,7 @@
 This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a pro at this lol.
 
 <!-- Screenshots Section -->
-<img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice7.png" width="50%"><img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice1.png" width="50%"><img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice4.png" width="50%"><img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice5.png" width="50%"><img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice6.png" width="50%"><img src="https://github.com/elifouts/Dotfiles/blob/main/images/rice3.png" width="50%">
+<img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot1.png" width="32%"><img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot2.png" width="32%"><img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot3.png" width="32%">
 
 > [!WARNING]
 > **Disclaimer:** These dotfiles are tailored for my specific setup and hardware. I cannot guarantee they will work for you.
@@ -24,7 +24,7 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
   
   1. **Clone the repository:**
      ```fish
-     git clone https://github.com/yourusername/Dotfiles.git ~/Dotfiles
+     git clone https://github.com/callei/Dotfiles.git ~/Dotfiles
      ```
 
   2. **Copy configurations:**
@@ -136,6 +136,7 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
 `XF86MonBrightnessDown` - Brightness Down  
 `XF86AudioPlay` - Play/Pause  
 
+> [!TIP]
 > More keybinds can be found in `~/.config/hypr/hyprland.conf`.
 
 ## Download Suggestions
