@@ -149,7 +149,7 @@ waybar
 wofi
 kitty
 fish
-fastfetch
+fastfetch                 # Optional (System Info)
 oh-my-posh
 swaync
 swayosd-git
@@ -159,17 +159,17 @@ wlogout
 grim
 slurp
 wl-clipboard
-nautilus
-firefox
-visual-studio-code-bin
-blueman
-nmtui
-pavucontrol
+nautilus                    Optional (File Manager)
+firefox                     Optional (Browser)
+visual-studio-code-bin      Optional (Text Editor)
+blueman                     Optional (Bluetooth GUI)
+nmtui                       Optional (Network TUI)
+pavucontrol                 Optional (Audio Control GUI)
 pipewire
 wireplumber
 playerctl
 brightnessctl
-gnome-keyring
+gnome-keyring               Easy to use w e.g visual studio
 polkit-gnome
 ttf-font-awesome
 otf-font-awesome
@@ -179,11 +179,11 @@ otf-font-awesome
 Here are some additional tools and fun packages that I recommend for a better terminal experience:
 
 ```txt
-btop        # Modern resource monitor
-bat         # Cat clone with syntax highlighting
-cava        # Console-based Audio Visualizer
-cmatrix     # Matrix screensaver
-cbonsai     # Grow a bonsai tree in your terminal :)
+btop        Modern resource monitor
+bat         Cat clone with syntax highlighting
+cava        Console-based Audio Visualizer
+cmatrix     Matrix screensaver
+cbonsai     Grow a bonsai tree in your terminal :)
 ```
 
 ## License & Attribution
