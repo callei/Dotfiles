@@ -1,0 +1,73 @@
+@import url("../themes/current.css");
+
+* {
+	all: unset;
+    background-image: none;
+    margin: unset;
+    padding: unset;
+    transition: 200ms cubic-bezier(0, 0, 1, 1);
+}
+
+
+window {
+    background-color: alpha(@bg, 0.2);
+    margin: 8px;
+}
+
+button {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    background-color: alpha(@bg, 0.5);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+}
+
+#lock {
+	background-image: url("./icons/lock.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+#logout {
+	background-image: url("./icons/logout.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+#suspend {
+	background-image: url("./icons/pause.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+#hibernate {
+	background-image: url("./icons/sleep.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+#shutdown {
+	background-image: url("./icons/power.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+#reboot {
+	background-image: url("./icons/reboot.png");
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    margin: 7px;
+}
+
+button:focus{
+    background-color: alpha(@color11, 0.1);
+    background-position:center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+button:hover {
+    background-color: alpha(@accent, 0.3);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    background-position:center;
+}

@@ -1,0 +1,84 @@
+#!/bin/bash
+# Volume/Mute control script with LED sync and SwayNC awareness
+# HP EliteBook 840 G6: GPIO bit 0 controls mic mute LED
+# Speaker mute LED is controlled by EC (not accessible via GPIO)
+
+# This is for my personal setup; modify as needed for your hardware.
+# You do not need this script if you don't have the specific LED control requirements.
+
+ACTION="$1"
+
+# Check if SwayNC control center is visible
+swaync_visible() {
+    [ "$(swaync-client -D 2>/dev/null)" = "true" ]
+}
+
+# Update mic mute LED on HP EliteBook
+# LED ON when muted (GPIO 0x0), LED OFF when unmuted (GPIO 0x1)
+update_mic_led() {
+    local muted=$(pamixer --default-source --get-mute)
+    if [ "$muted" = "true" ]; then
+        # Muted: LED OFF
+        sudo -n hda-verb /dev/snd/hwC0D0 0x1 SET_GPIO_DATA 0x1 >/dev/null 2>&1
+    else
+        # Unmuted: LED ON
+        sudo -n hda-verb /dev/snd/hwC0D0 0x1 SET_GPIO_DATA 0x0 >/dev/null 2>&1
+    fi
+}
+
+# Show mic mute OSD notification
+show_mic_mute_osd() {
+    local muted=$(pamixer --default-source --get-mute)
+    if swaync_visible; then
+        if [ "$muted" = "true" ]; then
+            notify-send -t 1500 -i microphone-sensitivity-muted-symbolic "Microphone Muted"
+        else
+            notify-send -t 1500 -i microphone-sensitivity-high-symbolic "Microphone On"
+        fi
+    else
+        if [ "$muted" = "true" ]; then
+            swayosd-client --custom-message "Microphone Muted" --custom-icon microphone-sensitivity-muted-symbolic
+        else
+            swayosd-client --custom-message "Microphone On" --custom-icon microphone-sensitivity-high-symbolic
+        fi
+    fi
+}
+
+case "$ACTION" in
+    volume-up)
+        if ! swaync_visible; then
+            swayosd-client --output-volume raise
+        else
+            pamixer -i 5
+        fi
+        ;;
+    volume-down)
+        if ! swaync_visible; then
+            swayosd-client --output-volume lower
+        else
+            pamixer -d 5
+        fi
+        ;;
+    mute-toggle)
+        if ! swaync_visible; then
+            swayosd-client --output-volume mute-toggle
+        else
+            pamixer -t
+        fi
+        swaync-client -R
+        ;;
+    mic-mute-toggle)
+        pamixer --default-source -t
+        update_mic_led
+        show_mic_mute_osd
+        swaync-client -R
+        ;;
+    sync-leds)
+        # Sync LEDs with current mute state (call on startup)
+        update_mic_led
+        ;;
+    *)
+        echo "Usage: $0 {volume-up|volume-down|mute-toggle|mic-mute-toggle|sync-leds}"
+        exit 1
+        ;;
+esac
