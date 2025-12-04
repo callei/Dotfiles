@@ -47,7 +47,7 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
   - **Layout**: Dwindle
   - **Gaps**: Inner 5/10, Outer 5/20
   - **Blur**: Enabled for Code, Firefox, Waybar, Wofi, SwayNC, SwayOSD.
-  - **Animations**: Custom bezier curves for smooth window movements.
+  - **Animations**: Bezier curves for smooth window movements.
   
   ## Configuration
   The main configuration file is located at `~/.config/hypr/hyprland.conf`.
@@ -59,12 +59,12 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
   ## Overview
   A top-positioned bar with custom modules.
   
-  - **Left**: Logo, Battery, Clock, Pacman Updates.
+  - **Left**: Logo (App launcher), Battery, Clock, Updates.
   - **Center**: Workspaces.
-  - **Right**: Bluetooth, Network, Memory, Notifications, Power.
+  - **Right**: Bluetooth, Network, Memory, Notification daemon (SwayNC), Power menu.
   
   ## Features
-  - **Pacman Updates**: Click to run a system update script in a floating terminal.
+  - **Pacman Updates**: Click to run a system update script in a floating terminal, from ml4w updater!.
   - **Network**: Click to open `nmtui`.
   - **Bluetooth**: Right-click to open `blueman-manager`.
 </details>
@@ -97,18 +97,19 @@ This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a
   
   Custom scripts located in `.config/wallpaperengine` for managing wallpapers and generating themes.
   - `wofi_wallpapers.sh`: Select wallpapers using Wofi.
-  - `generate_theme.sh`: Likely used for dynamic theming.
+  - `generate_theme.sh`: Used for generating themefiles.
 </details>
 
 ## Keybinds
 
 ### General
 `SUPER + Q` - Kill Active Window  
-`SUPER + F` - Fullscreen (State 0)  
+`SUPER + F` - Fullscreen (State 0, toggle)  
 `SUPER + M` - Fullscreen (State 1)  
 `SUPER + T` - Toggle Floating  
 `SUPER + J` - Toggle Split  
-`SUPER + K` - Swap Split  
+`SUPER + K` - Swap Split
+`SUPER + ALT + Arrow Keys` - Switch window position accordingly  
 
 ### Applications
 `SUPER + RETURN` - Terminal (Kitty)  
@@ -165,7 +166,7 @@ otf-font-awesome
 ```
 ## Extra Download Suggestions
 
-Here are some additional tools and fun packages that I recommend for a better terminal experience:
+Here are some additional tools and fun packages that I recommend for a better terminal:
 
 ```txt
 btop        Modern resource monitor
