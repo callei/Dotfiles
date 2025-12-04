@@ -149,7 +149,7 @@ waybar
 wofi
 kitty
 fish
-fastfetch                 # Optional (System Info)
+fastfetch                   Optional (System Info)
 oh-my-posh
 swaync
 swayosd-git
