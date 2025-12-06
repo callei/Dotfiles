@@ -1,5 +1,5 @@
 # Calle's Dotfiles
-This is my take on Arch (especially in CachyOS) ricing, bear in mind, I am not a pro at this lol.
+This is my take on Arch (especially hyprland in CachyOS) ricing, bear in mind, I am not a pro at this lol.
 
 <!-- Screenshots Section -->
 <img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot1.png" width="32%"><img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot2.png" width="32%"><img src="https://github.com/callei/Dotfiles/blob/main/images/screenshot3.png" width="32%">
