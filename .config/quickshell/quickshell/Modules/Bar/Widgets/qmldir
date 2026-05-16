@@ -1,0 +1,12 @@
+LogoWidget 1.0 LogoWidget.qml
+WallpaperWidget 1.0 WallpaperWidget.qml
+ClockWidget 1.0 ClockWidget.qml
+BatteryWidget 1.0 BatteryWidget.qml
+UpdatesWidget 1.0 UpdatesWidget.qml
+WorkspacesWidget 1.0 WorkspacesWidget.qml
+NetworkWidget 1.0 NetworkWidget.qml
+BluetoothWidget 1.0 BluetoothWidget.qml
+MemoryWidget 1.0 MemoryWidget.qml
+NotificationWidget 1.0 NotificationWidget.qml
+PowerWidget 1.0 PowerWidget.qml
+TailscaleWidget 1.0 TailscaleWidget.qml
