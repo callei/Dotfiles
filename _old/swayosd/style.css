@@ -1,0 +1,61 @@
+@import '../themes/current.css';
+
+window#osd {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: none;
+    background: alpha(@bg, 0.55);
+}
+
+window#osd #container {
+    margin: 8px;
+}
+
+window#osd image {
+    color: @color7;
+    -gtk-icon-size: 24px;
+}
+
+window#osd label {
+    color: @color7;
+    font-size: 14px;
+}
+
+window#osd progressbar:disabled,
+window#osd image:disabled {
+    opacity: 0.5;
+}
+
+window#osd progressbar {
+    min-height: 6px;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+}
+
+window#osd trough {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: alpha(@color2, 0.5);
+}
+
+window#osd progress {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: @accent;
+}
+
+/* Muted state - orange/warning accent */
+window#osd progressbar.muted progress,
+window#osd.muted progress {
+    background: @color1;
+}
+
+window#osd image.muted,
+window#osd label.muted,
+window#osd.muted image,
+window#osd.muted label {
+    color: @color1;
+}

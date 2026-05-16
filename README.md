@@ -31,10 +31,9 @@ This is my take on Arch (especially hyprland in CachyOS) ricing, bear in mind, I
      ```
      
   3. **Scripts:**
-     Ensure scripts in `~/.config/hypr/scripts` and `~/.config/waybar/scripts` are executable.
+     Ensure scripts in `~/.config/hypr/scripts` are executable.
      ```fish
      chmod +x ~/.config/hypr/scripts/*
-     chmod +x ~/.config/waybar/scripts/*
      ```
 </details>
 
@@ -46,12 +45,105 @@ This is my take on Arch (especially hyprland in CachyOS) ricing, bear in mind, I
   ## Overview
   - **Layout**: Dwindle
   - **Gaps**: Inner 5/10, Outer 5/20
-  - **Blur**: Enabled for Code, Firefox, Waybar, Wofi, SwayNC, SwayOSD.
+  - **Blur**: Enabled for Code, Firefox, Quickshell, Obsidian etc.
   - **Animations**: Bezier curves for smooth window movements.
   
   ## Configuration
-  The main configuration file is located at `~/.config/hypr/hyprland.conf`.
+  The main configuration file is located at `~/.config/hypr/hyprland.lua`.
 </details>
+
+<details>
+  <summary>Quickshell</summary>
+  
+  ## Overview
+  A custom layered quickshell application with custom modules.
+
+  ### Bar
+  - **Left**: Logo (App launcher), Battery, Clock, Updates + Optional Tailscale widget.
+  - **Center**: Workspaces.
+  - **Right**: Bluetooth, Network, Memory, Notification daemon, Power menu.
+  
+  ## Features
+  - **Pacman Updates**: Click to run a system update script in a floating terminal, from ml4w updater!.
+  - **Network**: Click to open quickshell with fallback to `nmtui`.
+  - **Bluetooth**: click to open quickshell menu with option to `blueman-manager`.
+  - And much more!
+</details>
+
+## Keybinds
+
+### General
+`SUPER + Q` - Kill Active Window  
+`SUPER + F` - Fullscreen (State 0, toggle)  
+`SUPER + M` - Fullscreen (State 1)  
+`SUPER + T` - Toggle Floating  
+`SUPER + ALT + Arrow Keys` - Switch window position accordingly  
+
+### Applications
+`SUPER + RETURN` - Terminal (Kitty)  
+`SUPER + E` - File Manager (Nautilus)  
+`SUPER + B` - Browser (Firefox)  
+`SUPER + C` - Editor (VS Code)  
+`SUPER + CTRL + RETURN` - App Launcher (Quickshell)  
+`SUPER + L` - Lock Screen (Hyprlock)  
+`SUPER + SHIFT + L` - Logout Menu (Wlogout)  
+
+### System
+`SUPER + CTRL + B` - Quickshell bluetooth  
+`SUPER + CTRL + N` - Quickshell notifications
+`SUPER + W` - Wallpaper Selector  
+`SUPER + SHIFT + S` - Screenshot (Grim + Slurp)  
+
+> [!TIP]
+> More keybinds can be found in `~/.config/hypr/lua/binds.lua`.
+
+## Download Suggestions
+
+Based on the configuration, you will need most of these packages:
+
+```txt
+hyprland
+quickshell
+kitty
+fish
+fastfetch                   Optional (System Info)
+oh-my-posh
+hyprlock
+hypridle
+wlogout
+grim
+slurp
+wl-clipboard
+nautilus                    Optional (File Manager)
+firefox                     Optional (Browser)
+visual-studio-code-bin      Optional (Text Editor)
+blueman                     Optional (Bluetooth GUI)
+nmtui                       Optional (Network TUI)
+pavucontrol                 Optional (Audio Control GUI)
+pipewire
+wireplumber
+playerctl
+brightnessctl
+gnome-keyring               Easy to use w e.g visual studio
+polkit-gnome
+ttf-font-awesome
+otf-font-awesome
+```
+## Extra Download Suggestions
+
+Here are some additional tools and fun packages that I recommend for a better terminal:
+
+```txt
+helix       A vim alternative, with a good tutorial
+btop        Modern resource monitor
+bat         Cat clone with syntax highlighting
+cava        Console-based Audio Visualizer
+cmatrix     Matrix screensaver
+cbonsai     Grow a bonsai tree in your terminal :)
+```
+
+---
+> Old stuff!
 
 <details>
   <summary>🚥 Waybar</summary>
@@ -84,97 +176,7 @@ This is my take on Arch (especially hyprland in CachyOS) ricing, bear in mind, I
   - **SwayOSD**: On-Screen Display for volume and brightness changes.
 </details>
 
-<details>
-  <summary>🐚 Fish & Oh My Posh</summary>
-  
-  - **Shell**: Fish
-  - **Prompt**: Oh My Posh (configured in `.config/ohmyposh`)
-  - **Terminal**: Kitty
-</details>
-
-<details>
-  <summary>🎨 Wallpaper Engine</summary>
-  
-  Custom scripts located in `.config/wallpaperengine` for managing wallpapers and generating themes.
-  - `wofi_wallpapers.sh`: Select wallpapers using Wofi.
-  - `generate_theme.sh`: Used for generating themefiles.
-</details>
-
-## Keybinds
-
-### General
-`SUPER + Q` - Kill Active Window  
-`SUPER + F` - Fullscreen (State 0, toggle)  
-`SUPER + M` - Fullscreen (State 1)  
-`SUPER + T` - Toggle Floating  
-`SUPER + J` - Toggle Split  
-`SUPER + K` - Swap Split
-`SUPER + ALT + Arrow Keys` - Switch window position accordingly  
-
-### Applications
-`SUPER + RETURN` - Terminal (Kitty)  
-`SUPER + E` - File Manager (Nautilus)  
-`SUPER + B` - Browser (Firefox)  
-`SUPER + C` - Editor (VS Code)  
-`SUPER + CTRL + RETURN` - App Launcher (Wofi)  
-`SUPER + L` - Lock Screen (Hyprlock)  
-`SUPER + SHIFT + L` - Logout Menu (Wlogout)  
-
-### System
-`SUPER + CTRL + B` - Reload Waybar  
-`SUPER + CTRL + N` - Reload SwayNC  
-`SUPER + W` - Wallpaper Selector  
-`SUPER + SHIFT + S` - Screenshot (Grim + Slurp)  
-
-> [!TIP]
-> More keybinds can be found in `~/.config/hypr/hyprland.conf`.
-
-## Download Suggestions
-
-Based on the configuration, you will need most of these packages:
-
-```txt
-hyprland
-waybar
-wofi
-kitty
-fish
-fastfetch                   Optional (System Info)
-oh-my-posh
-swaync
-swayosd-git
-hyprlock
-hypridle
-wlogout
-grim
-slurp
-wl-clipboard
-nautilus                    Optional (File Manager)
-firefox                     Optional (Browser)
-visual-studio-code-bin      Optional (Text Editor)
-blueman                     Optional (Bluetooth GUI)
-nmtui                       Optional (Network TUI)
-pavucontrol                 Optional (Audio Control GUI)
-pipewire
-wireplumber
-playerctl
-brightnessctl
-gnome-keyring               Easy to use w e.g visual studio
-polkit-gnome
-ttf-font-awesome
-otf-font-awesome
-```
-## Extra Download Suggestions
-
-Here are some additional tools and fun packages that I recommend for a better terminal:
-
-```txt
-btop        Modern resource monitor
-bat         Cat clone with syntax highlighting
-cava        Console-based Audio Visualizer
-cmatrix     Matrix screensaver
-cbonsai     Grow a bonsai tree in your terminal :)
-```
+---
 
 ## License & Attribution
 

@@ -1,0 +1,189 @@
+/* 
+ ___        ___   ___    __ ___         __  __        
+ \  \      /  /___\  \ /  / /\ \  ___  |  |/  \
+  \  \ /\ /  /    \\  V  /  \/ / /   \ |  / /\_\
+   \  V  V  / /\   \\   /|  /\ \/ /\  \|   /
+    \__/\__/\____/\_/__/ \__\/_/\___/\_/\_/
+
+  Waybar CSS Styling
+ ---------------------------------------------
+*/
+/* -------------------------------------------
+ *  Import theme colors
+ * ------------------------------------------ */
+
+@import '../themes/current.css';
+
+/* -------------------------------------------
+ *  Global styling
+ * ------------------------------------------- */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    border: none;
+    border-radius: 0px;
+    font-weight: normal; /* Change to 'bold' for bolder text */
+}
+window#waybar{
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+/* -------------------------------------------
+ *  Module container styling
+ * ------------------------------------------- */
+
+.module {
+    padding: 8px 15px;
+    margin: 7px 12px 0;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    background-color: alpha(@bg, 0.65);
+    /* border: 1px solid rgba(255,255,255,0.04); for frosted color effect */
+    color: @fg;
+}
+.modules-left {
+    padding: 12px 12px 15px 12px; /* top right bottom left: small top, larger bottom for shadow */
+}
+.modules-center {
+    padding: 12px 18px 15px 18px;
+}
+.modules-right {
+    padding: 12px 12px 15px 12px;
+}
+
+/* -------------------------------------------
+ *  Workspaces styling
+ * ------------------------------------------- */
+
+#workspaces{
+    padding: 4px 4px;
+    border-radius: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 20px;
+    color: @color11;
+    background-color: @color11;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+    font-size: 10px;
+}
+
+#workspaces button.active {
+    color: @color12;
+    background-color: @color12;
+    border-radius: 20px;
+    min-width: 30px;
+    background-size: 400% 400%;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
+
+#workspaces button:hover {
+    border-radius: 20px;
+    min-width: 30px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background: @color12;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+    border-radius: 20px;
+    color: @color11;
+    background-color: @color11;
+    opacity: 0.20;
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+}
+
+#workspaces button.empty:hover {
+    opacity: 0.2;
+    border-radius: 20px;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background: @color11;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty.active {
+    border-radius: 20px;
+    min-width: 30px;
+    border: none;
+    color: @color11;
+    background-color: @color11;
+    background-size: 400% 400%;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+/* -------------------------------------------
+ *  Individual module styling
+ * ------------------------------------------- */
+#custom-logo{
+    padding-left: 12px;
+    transition: all 0.3s ease;
+}
+
+#battery{
+    transition: all 0.3s ease;
+}
+#battery.charging {
+    color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffbe61;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+}
+
+#clock{
+    font-family: "JetBrainsMono Nerd Font";
+    transition: all 0.3s ease;
+}
+
+#custom-pacman{
+    transition: all 0.3s ease;
+}
+
+#bluetooth{
+    transition: all 0.3s ease;
+}
+
+#network{
+    padding-left: 12px;
+    transition: all 0.3s ease;
+}
+
+#memory{
+    transition: all 0.3s ease; 
+}
+
+#custom-notification{
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+#custom-power{
+    padding-left: 12px;
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------------------
+ *  Hover effects
+ * ------------------------------------------- */
+
+#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover,#memory:hover{
+    transition: all 0.1s ease;
+}
