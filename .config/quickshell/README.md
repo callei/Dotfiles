@@ -35,21 +35,3 @@ The output format is intentionally compatible with existing Waybar/SwayNC/Wlogou
 
 The bar is located in `quickshell/Modules/Bar/Bar.qml`
 We also have launcher and wallpaper picker in these modules. 
-
---------------------------------------------------------------
-
-~/.config/quickshell/
-├── shell.qml                 # Main shell entrypoint
-├── README.md
-├── bin/                      # Backend binary
-├── cmd/                      # Go backend source
-├── internal/                 # Go backend logic
-├── scripts/                  # Build scripts
-└── quickshell/
-    ├── Common/               # Theme singleton
-    ├── Modules/
-    │   ├── Bar/              # Status bar
-    │   ├── Launcher/         # App launcher overlay
-    │   └── WallpaperPicker/  # Wallpaper picker overlay
-    ├── Services/             # ShellService singleton
-    └── Widgets/              # Reusable UI components
