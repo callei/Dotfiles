@@ -1,4 +1,7 @@
 # Calle's Dotfiles
+
+## Do not use this if you see it, it is not optimized at all rn.
+
 This is my take on Arch (especially hyprland in CachyOS) ricing, bear in mind, I am not a pro at this lol.
 
 <!-- Screenshots Section -->
